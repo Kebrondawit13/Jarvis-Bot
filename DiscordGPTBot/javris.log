@@ -1,0 +1,541 @@
+2026-08-04 21:38:55,916 [INFO] logging in using static token
+2026-08-04 21:38:57,914 [INFO] Shard ID 0 has connected to Gateway (Session ID: 215e2fe9ec8995a7960888f4f1c8bd91).
+2026-08-04 21:39:17,129 [ERROR] Ignoring exception in command 'ai'
+Traceback (most recent call last):
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 859, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 524, in slash_ai
+    reply = await execute_chat(interaction.user, interaction.guild, prompt)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 440, in execute_chat
+    history = await asyncio.to_thread(get_user_memory, user_id, 20)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 180, in get_user_memory
+    cursor.execute("""
+sqlite3.OperationalError: no such column: timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'ai' raised an exception: OperationalError: no such column: timestamp
+2026-08-04 21:41:22,127 [INFO] logging in using static token
+2026-08-04 21:41:23,897 [INFO] Shard ID 0 has connected to Gateway (Session ID: d17e72cf3091b9ebb82c29a029bc2aca).
+2026-08-04 22:10:54,273 [INFO] logging in using static token
+2026-08-04 22:10:55,928 [INFO] Shard ID 0 has connected to Gateway (Session ID: 399287a06bd22a1d00a7c7f4d9c2780c).
+2026-08-04 22:44:44,747 [ERROR] Discord error on_message: (<Message id=1534391679132504174 channel=<TextChannel id=1534341956073685162 name='ai' position=2 nsfw=False news=False category_id=1534029768406859867> type=<MessageType.default: 0> author=<Member id=1487945462844489850 name='javris_56059' global_name='javris' bot=False nick=None guild=<Guild id=1534029767689502810 name='Test Ai' shard_id=0 chunked=True member_count=4>> flags=<MessageFlags value=0>>,)
+2026-08-04 22:45:28,613 [ERROR] Discord error on_message: (<Message id=1534391867075072120 channel=<TextChannel id=1534341956073685162 name='ai' position=2 nsfw=False news=False category_id=1534029768406859867> type=<MessageType.default: 0> author=<Member id=1487945462844489850 name='javris_56059' global_name='javris' bot=False nick=None guild=<Guild id=1534029767689502810 name='Test Ai' shard_id=0 chunked=True member_count=4>> flags=<MessageFlags value=0>>,)
+2026-08-04 22:45:32,500 [ERROR] Discord error on_message: (<Message id=1534391883604820179 channel=<TextChannel id=1534341956073685162 name='ai' position=2 nsfw=False news=False category_id=1534029768406859867> type=<MessageType.default: 0> author=<Member id=1487945462844489850 name='javris_56059' global_name='javris' bot=False nick=None guild=<Guild id=1534029767689502810 name='Test Ai' shard_id=0 chunked=True member_count=4>> flags=<MessageFlags value=0>>,)
+2026-08-04 22:45:41,082 [ERROR] Ignoring exception in command 'clear'
+Traceback (most recent call last):
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 859, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 1256, in slash_clear
+    clear_user_memory(
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 369, in clear_user_memory
+    cursor.execute(
+sqlite3.OperationalError: no such table: memory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'clear' raised an exception: OperationalError: no such table: memory
+2026-08-04 22:56:14,268 [ERROR] Discord error on_message: (<Message id=1534394575639150733 channel=<TextChannel id=1534341956073685162 name='ai' position=2 nsfw=False news=False category_id=1534029768406859867> type=<MessageType.default: 0> author=<Member id=1487945462844489850 name='javris_56059' global_name='javris' bot=False nick=None guild=<Guild id=1534029767689502810 name='Test Ai' shard_id=0 chunked=True member_count=4>> flags=<MessageFlags value=0>>,)
+2026-08-04 22:56:18,461 [ERROR] Ignoring exception in command 'clear'
+Traceback (most recent call last):
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 859, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 1256, in slash_clear
+    clear_user_memory(
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 369, in clear_user_memory
+    cursor.execute(
+sqlite3.OperationalError: no such table: memory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'clear' raised an exception: OperationalError: no such table: memory
+2026-08-04 22:56:27,155 [ERROR] Ignoring exception in command 'ai'
+Traceback (most recent call last):
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 859, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 1050, in slash_ai
+    reply, gif_url = await execute_chat(
+                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 774, in execute_chat
+    history = await asyncio.to_thread(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\Desktop\DiscordGPTBot\bot.py", line 272, in get_user_memory
+    cursor.execute(
+sqlite3.OperationalError: no such table: memory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kebron\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'ai' raised an exception: OperationalError: no such table: memory
+2026-08-04 23:39:49,862 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-08-04 23:39:49,862 [WARNING] davey is not installed, voice will NOT be supported
+2026-08-04 23:39:49,862 [INFO] logging in using static token
+2026-08-04 23:39:51,181 [INFO] Shard ID None has connected to Gateway (Session ID: f9451d194974750dca807bd9d0a1bd8d).
+2026-08-04 23:39:56,095 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:39:56,713 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:39:56,729 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:39:57,629 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:39:57,629 [INFO] GIF SEARCH: waving hello
+2026-08-04 23:40:26,868 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:40:28,923 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:40:28,938 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:40:30,800 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:40:30,800 [INFO] GIF SEARCH: celebration dance
+2026-08-04 23:43:24,349 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:43:25,609 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:43:25,609 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:43:26,211 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:43:26,211 [INFO] GIF SEARCH: high five
+2026-08-04 23:43:41,072 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:43:41,784 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:43:41,799 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:43:42,308 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:43:42,308 [INFO] GIF SEARCH: encouraging thumbs up
+2026-08-04 23:43:58,276 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:43:59,209 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:43:59,214 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:43:59,709 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:43:59,712 [INFO] GIF SEARCH: panic motivation
+2026-08-04 23:44:29,516 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:44:30,623 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:44:30,639 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:44:31,240 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:44:31,240 [INFO] GIF SEARCH: focus motivation
+2026-08-04 23:45:06,488 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:45:07,291 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:45:07,303 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:45:07,854 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:45:07,856 [INFO] GIF SEARCH: sassy side eye
+2026-08-04 23:46:27,074 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:46:28,300 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:46:28,976 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:46:29,583 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:46:29,583 [INFO] GIF SEARCH: waving hello
+2026-08-04 23:47:26,459 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:47:27,695 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:47:27,701 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:47:28,150 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:47:28,154 [INFO] GIF SEARCH: broom sweeping
+2026-08-04 23:47:45,396 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:47:46,310 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:47:46,310 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-04 23:47:46,714 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-04 23:47:46,714 [INFO] GIF SEARCH: celebration dance
+2026-08-04 23:57:56,142 [ERROR] ESP32 check error: 
+2026-08-04 23:59:32,422 [WARNING] Discord gateway disconnected
+2026-08-04 23:59:33,158 [INFO] Shard ID None has successfully RESUMED session f9451d194974750dca807bd9d0a1bd8d.
+2026-08-04 23:59:33,168 [INFO] Discord connection resumed
+2026-08-05 00:26:42,150 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:26:43,627 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:26:43,705 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:26:44,317 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:26:44,317 [INFO] GIF SEARCH: winking robot
+2026-08-05 00:28:11,155 [ERROR] ESP32 check error: 
+2026-08-05 00:28:14,745 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:28:15,613 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:28:15,613 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:28:16,464 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:28:16,495 [INFO] GIF SEARCH: waving hello
+2026-08-05 00:28:18,654 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:28:20,689 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:28:20,689 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:28:21,396 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:28:21,412 [INFO] GIF SEARCH: high five
+2026-08-05 00:28:23,862 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:28:25,603 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:28:46,999 [ERROR] ESP32 check error: 
+2026-08-05 00:29:36,968 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:29:37,686 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:29:38,193 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:29:38,900 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:29:38,900 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:29:39,509 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:29:39,524 [INFO] GIF SEARCH: thumbs up
+2026-08-05 00:30:02,802 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:30:03,716 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:30:03,727 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:30:04,405 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:30:04,407 [INFO] GIF SEARCH: mind blown
+2026-08-05 00:30:07,382 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:30:08,085 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:30:14,849 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:30:15,772 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:30:15,779 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:30:16,379 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:30:16,388 [INFO] GIF SEARCH: waving hello
+2026-08-05 00:31:02,633 [ERROR] ESP32 check error: 
+2026-08-05 00:31:08,647 [ERROR] ESP32 check error: 
+2026-08-05 00:31:28,439 [ERROR] ESP32 check error: 
+2026-08-05 00:32:10,288 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:32:12,376 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:32:12,386 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 00:32:13,034 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 00:32:13,034 [INFO] GIF SEARCH: creative lightbulb moment
+2026-08-05 00:52:17,139 [ERROR] ESP32 check error: 
+2026-08-05 00:54:45,427 [ERROR] ESP32 check error: 
+2026-08-05 00:56:05,764 [ERROR] ESP32 check error: 
+2026-08-05 00:56:11,776 [ERROR] ESP32 check error: 
+2026-08-05 00:56:17,778 [ERROR] ESP32 check error: 
+2026-08-05 00:56:23,793 [ERROR] ESP32 check error: 
+2026-08-05 00:56:29,817 [ERROR] ESP32 check error: 
+2026-08-05 00:56:35,828 [ERROR] ESP32 check error: 
+2026-08-05 00:56:41,863 [ERROR] ESP32 check error: 
+2026-08-05 00:56:47,887 [ERROR] ESP32 check error: 
+2026-08-05 00:56:53,917 [ERROR] ESP32 check error: 
+2026-08-05 00:56:59,926 [ERROR] ESP32 check error: 
+2026-08-05 00:57:05,942 [ERROR] ESP32 check error: 
+2026-08-05 00:57:11,957 [ERROR] ESP32 check error: 
+2026-08-05 00:57:17,985 [ERROR] ESP32 check error: 
+2026-08-05 00:57:24,016 [ERROR] ESP32 check error: 
+2026-08-05 00:57:30,042 [ERROR] ESP32 check error: 
+2026-08-05 00:57:36,059 [ERROR] ESP32 check error: 
+2026-08-05 00:57:42,089 [ERROR] ESP32 check error: 
+2026-08-05 00:57:48,114 [ERROR] ESP32 check error: 
+2026-08-05 00:57:54,134 [ERROR] ESP32 check error: 
+2026-08-05 00:58:00,161 [ERROR] ESP32 check error: 
+2026-08-05 00:58:06,171 [ERROR] ESP32 check error: 
+2026-08-05 00:58:12,201 [ERROR] ESP32 check error: 
+2026-08-05 00:58:18,229 [ERROR] ESP32 check error: 
+2026-08-05 00:58:24,247 [ERROR] ESP32 check error: 
+2026-08-05 00:58:30,259 [ERROR] ESP32 check error: 
+2026-08-05 00:58:36,276 [ERROR] ESP32 check error: 
+2026-08-05 00:58:42,304 [ERROR] ESP32 check error: 
+2026-08-05 00:58:48,325 [ERROR] ESP32 check error: 
+2026-08-05 00:58:54,347 [ERROR] ESP32 check error: 
+2026-08-05 00:59:00,366 [ERROR] ESP32 check error: 
+2026-08-05 00:59:06,382 [ERROR] ESP32 check error: 
+2026-08-05 00:59:12,397 [ERROR] ESP32 check error: 
+2026-08-05 00:59:18,421 [ERROR] ESP32 check error: 
+2026-08-05 00:59:24,463 [ERROR] ESP32 check error: 
+2026-08-05 00:59:30,486 [ERROR] ESP32 check error: 
+2026-08-05 00:59:36,510 [ERROR] ESP32 check error: 
+2026-08-05 00:59:42,527 [ERROR] ESP32 check error: 
+2026-08-05 00:59:48,553 [ERROR] ESP32 check error: 
+2026-08-05 00:59:54,578 [ERROR] ESP32 check error: 
+2026-08-05 01:00:00,609 [ERROR] ESP32 check error: 
+2026-08-05 01:00:06,633 [ERROR] ESP32 check error: 
+2026-08-05 01:00:12,663 [ERROR] ESP32 check error: 
+2026-08-05 01:00:18,695 [ERROR] ESP32 check error: 
+2026-08-05 01:00:24,718 [ERROR] ESP32 check error: 
+2026-08-05 01:00:30,734 [ERROR] ESP32 check error: 
+2026-08-05 01:00:36,761 [ERROR] ESP32 check error: 
+2026-08-05 01:00:42,790 [ERROR] ESP32 check error: 
+2026-08-05 01:00:48,806 [ERROR] ESP32 check error: 
+2026-08-05 01:00:54,837 [ERROR] ESP32 check error: 
+2026-08-05 01:01:00,859 [ERROR] ESP32 check error: 
+2026-08-05 01:01:06,881 [ERROR] ESP32 check error: 
+2026-08-05 01:01:12,894 [ERROR] ESP32 check error: 
+2026-08-05 01:01:18,912 [ERROR] ESP32 check error: 
+2026-08-05 01:01:24,930 [ERROR] ESP32 check error: 
+2026-08-05 01:01:30,945 [ERROR] ESP32 check error: 
+2026-08-05 01:01:32,382 [WARNING] Discord gateway disconnected
+2026-08-05 01:01:32,733 [INFO] Shard ID None has successfully RESUMED session f9451d194974750dca807bd9d0a1bd8d.
+2026-08-05 01:01:32,741 [INFO] Discord connection resumed
+2026-08-05 01:01:36,968 [ERROR] ESP32 check error: 
+2026-08-05 01:01:42,997 [ERROR] ESP32 check error: 
+2026-08-05 01:01:49,014 [ERROR] ESP32 check error: 
+2026-08-05 01:01:55,041 [ERROR] ESP32 check error: 
+2026-08-05 01:02:01,047 [ERROR] ESP32 check error: 
+2026-08-05 01:02:07,058 [ERROR] ESP32 check error: 
+2026-08-05 01:02:13,078 [ERROR] ESP32 check error: 
+2026-08-05 01:02:19,097 [ERROR] ESP32 check error: 
+2026-08-05 01:02:25,129 [ERROR] ESP32 check error: 
+2026-08-05 01:02:31,146 [ERROR] ESP32 check error: 
+2026-08-05 01:02:37,160 [ERROR] ESP32 check error: 
+2026-08-05 01:02:43,168 [ERROR] ESP32 check error: 
+2026-08-05 01:02:49,189 [ERROR] ESP32 check error: 
+2026-08-05 01:02:55,196 [ERROR] ESP32 check error: 
+2026-08-05 01:03:01,207 [ERROR] ESP32 check error: 
+2026-08-05 01:03:07,225 [ERROR] ESP32 check error: 
+2026-08-05 01:03:13,250 [ERROR] ESP32 check error: 
+2026-08-05 01:03:19,262 [ERROR] ESP32 check error: 
+2026-08-05 01:03:25,279 [ERROR] ESP32 check error: 
+2026-08-05 01:03:31,309 [ERROR] ESP32 check error: 
+2026-08-05 01:03:37,315 [ERROR] ESP32 check error: 
+2026-08-05 01:03:43,332 [ERROR] ESP32 check error: 
+2026-08-05 01:03:49,349 [ERROR] ESP32 check error: 
+2026-08-05 01:03:55,375 [ERROR] ESP32 check error: 
+2026-08-05 01:04:01,391 [ERROR] ESP32 check error: 
+2026-08-05 01:04:07,410 [ERROR] ESP32 check error: 
+2026-08-05 01:04:13,436 [ERROR] ESP32 check error: 
+2026-08-05 01:04:19,441 [ERROR] ESP32 check error: 
+2026-08-05 01:04:25,463 [ERROR] ESP32 check error: 
+2026-08-05 01:04:31,486 [ERROR] ESP32 check error: 
+2026-08-05 01:04:37,520 [ERROR] ESP32 check error: 
+2026-08-05 01:04:43,545 [ERROR] ESP32 check error: 
+2026-08-05 01:04:49,555 [ERROR] ESP32 check error: 
+2026-08-05 01:04:55,581 [ERROR] ESP32 check error: 
+2026-08-05 01:05:01,596 [ERROR] ESP32 check error: 
+2026-08-05 01:05:07,629 [ERROR] ESP32 check error: 
+2026-08-05 01:05:13,645 [ERROR] ESP32 check error: 
+2026-08-05 01:05:19,665 [ERROR] ESP32 check error: 
+2026-08-05 01:05:25,688 [ERROR] ESP32 check error: 
+2026-08-05 01:05:31,701 [ERROR] ESP32 check error: 
+2026-08-05 01:05:37,736 [ERROR] ESP32 check error: 
+2026-08-05 01:05:43,763 [ERROR] ESP32 check error: 
+2026-08-05 01:05:49,788 [ERROR] ESP32 check error: 
+2026-08-05 01:05:55,800 [ERROR] ESP32 check error: 
+2026-08-05 01:06:01,811 [ERROR] ESP32 check error: 
+2026-08-05 01:06:07,830 [ERROR] ESP32 check error: 
+2026-08-05 01:06:13,843 [ERROR] ESP32 check error: 
+2026-08-05 01:06:19,862 [ERROR] ESP32 check error: 
+2026-08-05 01:06:25,875 [ERROR] ESP32 check error: 
+2026-08-05 01:06:31,897 [ERROR] ESP32 check error: 
+2026-08-05 01:06:37,919 [ERROR] ESP32 check error: 
+2026-08-05 01:06:43,939 [ERROR] ESP32 check error: 
+2026-08-05 01:06:49,963 [ERROR] ESP32 check error: 
+2026-08-05 01:06:55,996 [ERROR] ESP32 check error: 
+2026-08-05 01:07:02,014 [ERROR] ESP32 check error: 
+2026-08-05 01:07:08,044 [ERROR] ESP32 check error: 
+2026-08-05 01:07:14,058 [ERROR] ESP32 check error: 
+2026-08-05 01:07:20,075 [ERROR] ESP32 check error: 
+2026-08-05 01:07:26,090 [ERROR] ESP32 check error: 
+2026-08-05 01:07:32,106 [ERROR] ESP32 check error: 
+2026-08-05 01:07:38,133 [ERROR] ESP32 check error: 
+2026-08-05 01:07:44,164 [ERROR] ESP32 check error: 
+2026-08-05 01:07:50,187 [ERROR] ESP32 check error: 
+2026-08-05 01:07:56,213 [ERROR] ESP32 check error: 
+2026-08-05 01:08:02,239 [ERROR] ESP32 check error: 
+2026-08-05 01:08:08,262 [ERROR] ESP32 check error: 
+2026-08-05 01:08:14,289 [ERROR] ESP32 check error: 
+2026-08-05 01:08:20,310 [ERROR] ESP32 check error: 
+2026-08-05 01:08:26,316 [ERROR] ESP32 check error: 
+2026-08-05 01:08:32,333 [ERROR] ESP32 check error: 
+2026-08-05 01:08:38,352 [ERROR] ESP32 check error: 
+2026-08-05 01:08:44,383 [ERROR] ESP32 check error: 
+2026-08-05 01:08:50,389 [ERROR] ESP32 check error: 
+2026-08-05 01:08:56,414 [ERROR] ESP32 check error: 
+2026-08-05 01:09:02,438 [ERROR] ESP32 check error: 
+2026-08-05 01:09:08,441 [ERROR] ESP32 check error: 
+2026-08-05 01:09:14,476 [ERROR] ESP32 check error: 
+2026-08-05 01:09:20,503 [ERROR] ESP32 check error: 
+2026-08-05 01:09:26,527 [ERROR] ESP32 check error: 
+2026-08-05 01:09:32,543 [ERROR] ESP32 check error: 
+2026-08-05 01:09:38,560 [ERROR] ESP32 check error: 
+2026-08-05 01:09:44,576 [ERROR] ESP32 check error: 
+2026-08-05 01:09:50,594 [ERROR] ESP32 check error: 
+2026-08-05 01:09:56,607 [ERROR] ESP32 check error: 
+2026-08-05 01:10:02,621 [ERROR] ESP32 check error: 
+2026-08-05 01:10:08,625 [ERROR] ESP32 check error: 
+2026-08-05 01:10:14,636 [ERROR] ESP32 check error: 
+2026-08-05 01:10:20,657 [ERROR] ESP32 check error: 
+2026-08-05 01:10:26,667 [ERROR] ESP32 check error: 
+2026-08-05 01:10:32,676 [ERROR] ESP32 check error: 
+2026-08-05 01:10:38,692 [ERROR] ESP32 check error: 
+2026-08-05 01:10:44,706 [ERROR] ESP32 check error: 
+2026-08-05 01:10:50,723 [ERROR] ESP32 check error: 
+2026-08-05 01:10:56,745 [ERROR] ESP32 check error: 
+2026-08-05 01:11:02,779 [ERROR] ESP32 check error: 
+2026-08-05 01:11:08,791 [ERROR] ESP32 check error: 
+2026-08-05 01:11:14,813 [ERROR] ESP32 check error: 
+2026-08-05 01:11:20,835 [ERROR] ESP32 check error: 
+2026-08-05 01:11:26,856 [ERROR] ESP32 check error: 
+2026-08-05 01:11:32,877 [ERROR] ESP32 check error: 
+2026-08-05 01:11:38,891 [ERROR] ESP32 check error: 
+2026-08-05 01:11:44,923 [ERROR] ESP32 check error: 
+2026-08-05 01:11:50,942 [ERROR] ESP32 check error: 
+2026-08-05 01:11:56,966 [ERROR] ESP32 check error: 
+2026-08-05 01:12:02,988 [ERROR] ESP32 check error: 
+2026-08-05 01:12:09,017 [ERROR] ESP32 check error: 
+2026-08-05 01:12:15,042 [ERROR] ESP32 check error: 
+2026-08-05 01:12:21,054 [ERROR] ESP32 check error: 
+2026-08-05 01:12:27,077 [ERROR] ESP32 check error: 
+2026-08-05 01:12:33,083 [ERROR] ESP32 check error: 
+2026-08-05 01:12:39,108 [ERROR] ESP32 check error: 
+2026-08-05 01:12:45,113 [ERROR] ESP32 check error: 
+2026-08-05 01:12:51,124 [ERROR] ESP32 check error: 
+2026-08-05 01:12:57,128 [ERROR] ESP32 check error: 
+2026-08-05 01:13:03,139 [ERROR] ESP32 check error: 
+2026-08-05 01:13:09,155 [ERROR] ESP32 check error: 
+2026-08-05 01:13:15,167 [ERROR] ESP32 check error: 
+2026-08-05 01:13:21,190 [ERROR] ESP32 check error: 
+2026-08-05 01:13:27,220 [ERROR] ESP32 check error: 
+2026-08-05 01:13:33,252 [ERROR] ESP32 check error: 
+2026-08-05 01:13:39,273 [ERROR] ESP32 check error: 
+2026-08-05 01:13:45,286 [ERROR] ESP32 check error: 
+2026-08-05 01:13:51,304 [ERROR] ESP32 check error: 
+2026-08-05 01:13:57,336 [ERROR] ESP32 check error: 
+2026-08-05 01:14:03,367 [ERROR] ESP32 check error: 
+2026-08-05 01:14:09,380 [ERROR] ESP32 check error: 
+2026-08-05 01:14:15,397 [ERROR] ESP32 check error: 
+2026-08-05 01:14:21,401 [ERROR] ESP32 check error: 
+2026-08-05 01:14:27,441 [ERROR] ESP32 check error: 
+2026-08-05 01:14:33,464 [ERROR] ESP32 check error: 
+2026-08-05 01:14:39,486 [ERROR] ESP32 check error: 
+2026-08-05 01:14:45,522 [ERROR] ESP32 check error: 
+2026-08-05 01:14:51,545 [ERROR] ESP32 check error: 
+2026-08-05 01:14:57,565 [ERROR] ESP32 check error: 
+2026-08-05 01:15:03,583 [ERROR] ESP32 check error: 
+2026-08-05 01:15:09,592 [ERROR] ESP32 check error: 
+2026-08-05 01:15:15,605 [ERROR] ESP32 check error: 
+2026-08-05 01:15:21,607 [ERROR] ESP32 check error: 
+2026-08-05 01:15:27,616 [ERROR] ESP32 check error: 
+2026-08-05 01:15:33,629 [ERROR] ESP32 check error: 
+2026-08-05 01:15:39,658 [ERROR] ESP32 check error: 
+2026-08-05 01:15:45,669 [ERROR] ESP32 check error: 
+2026-08-05 01:15:51,674 [ERROR] ESP32 check error: 
+2026-08-05 01:15:57,699 [ERROR] ESP32 check error: 
+2026-08-05 01:16:03,716 [ERROR] ESP32 check error: 
+2026-08-05 01:16:09,743 [ERROR] ESP32 check error: 
+2026-08-05 01:16:15,759 [ERROR] ESP32 check error: 
+2026-08-05 01:16:21,789 [ERROR] ESP32 check error: 
+2026-08-05 01:16:27,812 [ERROR] ESP32 check error: 
+2026-08-05 01:16:33,831 [ERROR] ESP32 check error: 
+2026-08-05 01:16:39,846 [ERROR] ESP32 check error: 
+2026-08-05 01:16:45,880 [ERROR] ESP32 check error: 
+2026-08-05 01:16:51,897 [ERROR] ESP32 check error: 
+2026-08-05 01:16:57,915 [ERROR] ESP32 check error: 
+2026-08-05 01:17:03,928 [ERROR] ESP32 check error: 
+2026-08-05 01:17:09,953 [ERROR] ESP32 check error: 
+2026-08-05 01:17:15,982 [ERROR] ESP32 check error: 
+2026-08-05 01:17:21,992 [ERROR] ESP32 check error: 
+2026-08-05 01:17:28,021 [ERROR] ESP32 check error: 
+2026-08-05 01:17:34,031 [ERROR] ESP32 check error: 
+2026-08-05 01:17:40,054 [ERROR] ESP32 check error: 
+2026-08-05 01:17:46,077 [ERROR] ESP32 check error: 
+2026-08-05 01:17:52,099 [ERROR] ESP32 check error: 
+2026-08-05 01:17:58,128 [ERROR] ESP32 check error: 
+2026-08-05 01:18:04,147 [ERROR] ESP32 check error: 
+2026-08-05 01:18:10,148 [ERROR] ESP32 check error: 
+2026-08-05 01:18:16,176 [ERROR] ESP32 check error: 
+2026-08-05 01:18:22,197 [ERROR] ESP32 check error: 
+2026-08-05 01:18:28,203 [ERROR] ESP32 check error: 
+2026-08-05 01:18:34,226 [ERROR] ESP32 check error: 
+2026-08-05 01:18:40,240 [ERROR] ESP32 check error: 
+2026-08-05 01:18:46,272 [ERROR] ESP32 check error: 
+2026-08-05 01:18:52,287 [ERROR] ESP32 check error: 
+2026-08-05 01:18:58,303 [ERROR] ESP32 check error: 
+2026-08-05 01:19:04,314 [ERROR] ESP32 check error: 
+2026-08-05 01:19:10,330 [ERROR] ESP32 check error: 
+2026-08-05 01:19:16,359 [ERROR] ESP32 check error: 
+2026-08-05 01:19:22,368 [ERROR] ESP32 check error: 
+2026-08-05 01:19:28,373 [ERROR] ESP32 check error: 
+2026-08-05 01:19:34,388 [ERROR] ESP32 check error: 
+2026-08-05 01:19:40,394 [ERROR] ESP32 check error: 
+2026-08-05 01:19:46,427 [ERROR] ESP32 check error: 
+2026-08-05 01:19:52,449 [ERROR] ESP32 check error: 
+2026-08-05 01:19:58,468 [ERROR] ESP32 check error: 
+2026-08-05 01:20:04,477 [ERROR] ESP32 check error: 
+2026-08-05 01:20:10,488 [ERROR] ESP32 check error: 
+2026-08-05 01:20:16,510 [ERROR] ESP32 check error: 
+2026-08-05 01:20:22,511 [ERROR] ESP32 check error: 
+2026-08-05 01:20:28,525 [ERROR] ESP32 check error: 
+2026-08-05 01:20:34,540 [ERROR] ESP32 check error: 
+2026-08-05 01:20:40,558 [ERROR] ESP32 check error: 
+2026-08-05 01:20:46,581 [ERROR] ESP32 check error: 
+2026-08-05 01:20:52,609 [ERROR] ESP32 check error: 
+2026-08-05 01:20:58,803 [ERROR] ESP32 check error: 
+2026-08-05 01:21:04,824 [ERROR] ESP32 check error: 
+2026-08-05 01:21:10,837 [ERROR] ESP32 check error: 
+2026-08-05 01:21:16,876 [ERROR] ESP32 check error: 
+2026-08-05 01:21:22,897 [ERROR] ESP32 check error: 
+2026-08-05 01:21:28,939 [ERROR] ESP32 check error: 
+2026-08-05 01:21:34,984 [ERROR] ESP32 check error: 
+2026-08-05 01:21:40,993 [ERROR] ESP32 check error: 
+2026-08-05 01:21:47,022 [ERROR] ESP32 check error: 
+2026-08-05 01:21:53,034 [ERROR] ESP32 check error: 
+2026-08-05 01:21:59,045 [ERROR] ESP32 check error: 
+2026-08-05 01:22:05,067 [ERROR] ESP32 check error: 
+2026-08-05 01:22:11,073 [ERROR] ESP32 check error: 
+2026-08-05 01:22:17,101 [ERROR] ESP32 check error: 
+2026-08-05 01:22:23,113 [ERROR] ESP32 check error: 
+2026-08-05 01:22:29,127 [ERROR] ESP32 check error: 
+2026-08-05 01:22:35,165 [ERROR] ESP32 check error: 
+2026-08-05 01:22:41,172 [ERROR] ESP32 check error: 
+2026-08-05 01:22:47,190 [ERROR] ESP32 check error: 
+2026-08-05 01:22:53,213 [ERROR] ESP32 check error: 
+2026-08-05 01:22:59,227 [ERROR] ESP32 check error: 
+2026-08-05 01:23:05,237 [ERROR] ESP32 check error: 
+2026-08-05 01:23:11,249 [ERROR] ESP32 check error: 
+2026-08-05 01:23:17,292 [ERROR] ESP32 check error: 
+2026-08-05 01:23:23,314 [ERROR] ESP32 check error: 
+2026-08-05 01:23:29,334 [ERROR] ESP32 check error: 
+2026-08-05 01:23:35,352 [ERROR] ESP32 check error: 
+2026-08-05 01:23:41,366 [ERROR] ESP32 check error: 
+2026-08-05 01:23:47,376 [ERROR] ESP32 check error: 
+2026-08-05 01:23:53,387 [ERROR] ESP32 check error: 
+2026-08-05 01:23:59,420 [ERROR] ESP32 check error: 
+2026-08-05 01:24:05,441 [ERROR] ESP32 check error: 
+2026-08-05 01:24:11,467 [ERROR] ESP32 check error: 
+2026-08-05 01:24:17,484 [ERROR] ESP32 check error: 
+2026-08-05 01:24:23,517 [ERROR] ESP32 check error: 
+2026-08-05 01:24:29,530 [ERROR] ESP32 check error: 
+2026-08-05 01:24:35,561 [ERROR] ESP32 check error: 
+2026-08-05 01:24:41,595 [ERROR] ESP32 check error: 
+2026-08-05 01:24:52,038 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:24:53,113 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:24:53,213 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:24:53,695 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:24:53,695 [INFO] GIF SEARCH: waving hello
+2026-08-05 01:25:29,221 [INFO] Javris shutting down cleanly.
+2026-08-05 01:28:42,416 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-08-05 01:28:42,416 [WARNING] davey is not installed, voice will NOT be supported
+2026-08-05 01:28:42,416 [INFO] logging in using static token
+2026-08-05 01:28:44,100 [INFO] Shard ID None has connected to Gateway (Session ID: 4f58cc61f03d81e1b48f0dc407a76d3a).
+2026-08-05 01:28:50,381 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:28:51,156 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:28:51,188 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:28:51,773 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:28:51,773 [INFO] GIF SEARCH: waving hello
+2026-08-05 01:28:58,021 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:28:58,738 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:29:09,396 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:29:10,108 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:29:10,108 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:29:10,728 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:29:10,728 [INFO] GIF SEARCH: friendly robot wave
+2026-08-05 01:29:29,098 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:29:29,977 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:29:29,977 [INFO] AFC is enabled with max remote calls: 10.
+2026-08-05 01:29:30,475 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-08-05 01:29:30,489 [INFO] GIF SEARCH: robot wave
+2026-08-05 01:30:48,131 [WARNING] Can't keep up, shard ID None websocket is 41.8s behind.
