@@ -1,0 +1,8 @@
+discord.py
+python-dotenv
+aiosqlite
+flask
+aiohttp
+requests
+pypdf
+google-genai
