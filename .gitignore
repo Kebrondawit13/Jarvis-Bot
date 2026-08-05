@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Database / memory
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated files
+temp_images/
+
+# Virtual environments
+venv/
+env/
+
+# Editor files
+.vscode/
+.idea/
+
+# Windows files
+Thumbs.db
